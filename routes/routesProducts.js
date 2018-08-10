@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const faker = require('faker');
-const Product = require('../Models/products');
+const Product = require('../models/products');
 
 router.get('/', (req, res) => {
     Product.find( {}, { category: 1, name:1, cover:1, price:1 },(err,categories)=>{
